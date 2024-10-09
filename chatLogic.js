@@ -27,5 +27,5 @@ document.querySelector('#chatForm').addEventListener('submit', function(e) {
 // Listen for messages from the server
 ws.onmessage = function(event) {
     console.log("Message from server: ", event.data);
-    document.querySelector('#chatOutput').innerHTML += 'Server: ' + event.data + '<br>'; // Show the message in the chat log
+    document.querySelector('#chatOutput').innerHTML += 'Other: ' + event.data + '<br>'; // Show the message in the chat log
 };
