@@ -1,8 +1,6 @@
 const url = 'ws://localhost:8080';
 const ws = new WebSocket(url);
 
-
-// Handle WebSocket open event
 ws.onopen = function() {
     console.log("Connected to WebSocket server");
 };
@@ -28,4 +26,14 @@ document.querySelector('#chatForm').addEventListener('submit', function(e) {
 ws.onmessage = function(event) {
     console.log("Message from server: ", event.data);
     document.querySelector('#chatOutput').innerHTML += 'Other: ' + event.data + '<br>'; // Show the message in the chat log
+};
+
+// Handle any errors that occur.
+ws.onerror = function(error) {
+    console.error("WebSocket Error: ", error);
+};
+
+// Handle the close event
+ws.onclose = function() {
+    console.log("WebSocket connection closed");
 };
