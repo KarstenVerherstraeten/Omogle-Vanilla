@@ -23,6 +23,4 @@ wss.on('connection', function connection(ws) {
     ws.on('close', () => {
         clients.delete(id);
     });
-
-    ws.send("Welcome to the WebSocket server!");
 });
