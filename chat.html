@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./chatLogic.js" defer></script>
     <title>Chatroom</title>
 </head>
 <body>
-    <form id="send" action="">
-        <input type="text" id="message" placeholder="Type your message here">
+    <form id="chatForm" action="">
+        <div id="chatOutput">
+            <!-- Chat messages will be displayed here -->
+        </div>
+
+        <input type="text" id="chatInput" placeholder="Type message">
         <button type="submit">Send</button>
     </form>
 </body>
