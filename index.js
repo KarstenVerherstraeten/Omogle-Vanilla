@@ -31,7 +31,6 @@ wss.on('connection', function connection(ws) {
         type: 'info',
         groupId: groupId,
         clientId: id,
-        activeGroups: [...Groups.keys()]
     }));
     ws.on("message", function message(data) {
         console.log("received: %s", data);
