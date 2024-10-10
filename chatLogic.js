@@ -10,6 +10,7 @@ ws.onopen = function() {
 ws.addEventListener('message', (event) => {
     // Step 3: Parse the incoming message
     const data = JSON.parse(event.data);
+    
 
     // Step 4: Use the extracted information
     if (data.type === 'info') {
@@ -47,9 +48,12 @@ document.querySelector('#chatForm').addEventListener('submit', function(e) {
 
 // Listen for messages from the server
 ws.onmessage = function(event) {
-    console.log("Message from server: ", event.data);
+
     document.querySelector('#chatOutput').innerHTML += 'Other: ' + event.data + '<br>'; // Show the message in the chat log
+        
 };
+
+
 
 // Handle any errors that occur.
 ws.onerror = function(error) {
