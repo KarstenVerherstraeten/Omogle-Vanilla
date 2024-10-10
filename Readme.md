@@ -29,11 +29,11 @@ Omogle-Vanilla is a simple, vanilla JavaScript implementation of a chat applicat
 ## Sources
 
 [Postman Tutorial on websockets](https://quickstarts.postman.com/guide/websockets-node/index.html#0)
+
 [ChatGPT Inital setup and chatroom logics](https://chatgpt.com/share/670681fc-be5c-800f-abd0-8a1a61649633)
 
-## License
+[Github Copilot](https://github.com/features/copilot)
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
