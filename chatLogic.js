@@ -5,6 +5,29 @@ ws.onopen = function() {
     console.log("Connected to WebSocket server");
 };
 
+
+//Group information
+ws.addEventListener('message', (event) => {
+    // Step 3: Parse the incoming message
+    const data = JSON.parse(event.data);
+
+    // Step 4: Use the extracted information
+    if (data.type === 'info') {
+        const groupId = data.groupId;
+        const clientId = data.clientId;
+
+        // Handle the information as needed
+        console.log('Group ID:', groupId);
+        console.log('Client ID:', clientId);
+        document.querySelector('#ChatIndex').innerHTML = ` <h1>Chatroom ${groupId}</h1>`;
+    }
+
+    
+
+});
+
+
+
 // Handle the form submission to send a message
 document.querySelector('#chatForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent default form submission
